@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MaSanteController">
+   <children>
+      <BorderPane id="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox id=" " BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="573.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/logo.PNG" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="270.0">
+                     <children>
+                        <Button id="helpButton" fx:id="pageAide" mnemonicParsing="false" onAction="#changeScreenButtonPushed">
+                           <graphic>
+                              <FontAwesomeIconView id="helpButton" fill="#002290" glyphName="QUESTION_CIRCLE" size="35">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children></HBox>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <bottom>
+            <HBox id="footer" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="footerButton" fx:id="pageAccueil" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefWidth="75.5" text="Accueil">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="HOME" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageCarte" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefWidth="75.5" text="Carte">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="MAP_MARKER" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageLieux" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefWidth="75.5" text="Lieux">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="MAP_SIGNS" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButtonSelected" contentDisplay="TOP" mnemonicParsing="false" prefWidth="75.5" text="Ma santé">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="HEARTBEAT" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageAttestation" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefWidth="75.5" text="Attestation">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="FILE_TEXT_ALT" size="20" />
+                     </graphic>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <JFXComboBox fx:id="listEtat" layoutX="39.0" layoutY="385.0" prefHeight="25.0" prefWidth="298.0" promptText="Choisissez un état de santé..." />
+      <ImageView fitHeight="213.0" fitWidth="352.0" layoutX="14.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/masante.PNG" />
+         </image>
+      </ImageView>
+      <Button id="activateButton" layoutX="21.0" layoutY="459.0" mnemonicParsing="false" onAction="#boutonEnregistrer" text="Enregistrer l'état de santé">
+                    <cursor>
+                    	<Cursor fx:constant="HAND" />
+                  	</cursor>
+                  </Button>
+      <Label layoutX="15.0" layoutY="291.0" text="Enregistrez dans l'application votre état de santé actuel.&#10;C'est une étape importante permettant de casser les&#10;chaines de propagation du virus." textAlignment="CENTER" textFill="#303030">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

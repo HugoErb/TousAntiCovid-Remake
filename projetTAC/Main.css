@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+.root{
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+#buttonActivate {
+    -fx-background-color: linear-gradient(#FF9F6F, #FD8B51);
+    -fx-background-insets: 0; 
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-padding: 12px 50px 12px 50px;
+    -fx-font-size: 17px;
+    
+}
+
+
+#header{
+    -fx-effect: dropshadow(two-pass-box, rgba(0,0,0,0.4), 1, 2, 0, 1.5);
+    
+}
+
+#footer{
+}

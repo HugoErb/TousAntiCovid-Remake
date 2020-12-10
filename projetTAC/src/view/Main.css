@@ -1,0 +1,86 @@
+.root{
+    -fx-background-color: #FFFFFF;
+}
+
+#activateButton {
+    -fx-background-color: white;
+    -fx-border-color: #002290;
+    -fx-border-width: 1;
+    -fx-background-insets: 0; 
+    -fx-text-fill: #002290;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+    -fx-padding: 12px 70px 12px 70px;
+    -fx-font-size: 17px;
+}
+
+#gridPane{
+	-fx-font-family: SansSerif;
+	-fx-font-size: 15px;
+	-fx-text-fill: #303030;
+}
+
+#activateButton:pressed {
+  -fx-background-color: #002290;
+  -fx-text-fill: white;
+}
+
+#shadowBox {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+}
+
+#helpButton{
+	-fx-text-fill: #002290;
+    -fx-background-color: white;
+}
+
+#header{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: lightgrey;
+}
+
+#footer{
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: lightgrey;
+}
+
+#footerButton{
+    -fx-text-fill: #002290;
+    -fx-background-color: white;
+    -fx-pref-height:60px;   
+}
+
+#footerButtonSelected{
+	-fx-text-fill: #002290;
+    -fx-background-color: white;
+    -fx-pref-height:60px;
+    -fx-font-weight:bold;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #002290;
+}
+
+.myDialog{
+    -fx-background-color: white;
+}
+
+.myDialog > *.label.content{
+    -fx-font-size: 15px;
+}
+
+.myDialog .button{
+    -fx-background-color: white;
+    -fx-border-color: #002290;
+    -fx-border-width: 1;
+    -fx-background-insets: 0; 
+    -fx-text-fill: #002290;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0.0, 0, 1);
+ }
+
+.myDialog .button:hover {
+  -fx-background-color: #E6E6E6;
+}
+
+.myDialog .button:pressed {
+  -fx-background-color: #002290;
+  -fx-text-fill: white;
+}

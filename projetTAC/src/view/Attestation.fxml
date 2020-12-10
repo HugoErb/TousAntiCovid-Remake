@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AttestationController">
+   <children>
+      <BorderPane id="header" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox id=" " BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="70.0" fitWidth="573.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/logo.PNG" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="4.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="270.0">
+                     <children>
+                        <Button id="helpButton" fx:id="pageAide" mnemonicParsing="false" onAction="#changeScreenButton">
+                           <graphic>
+                              <FontAwesomeIconView id="helpButton" fill="#002290" glyphName="QUESTION_CIRCLE" size="35">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children></HBox>
+               </children>
+            </HBox>
+         </top>
+      </BorderPane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="70.0" pannable="true" prefHeight="538.0" prefWidth="374.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" vbarPolicy="NEVER">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="940.0" prefWidth="370.0" style="-fx-background-color: white;">
+          <children>
+                  <ImageView fitHeight="211.0" fitWidth="331.0" layoutX="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/attestation.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="10.0" layoutY="211.0" text="Remplissez et générez votre attestation de déplacement &#10;dérogatoire directement depuis l'application.&#10;&#10;" textAlignment="CENTER" textFill="#303030">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField layoutX="67.0" layoutY="280.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez votre nom..." />
+                  <JFXTextField layoutX="67.0" layoutY="325.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez votre prénom..." />
+                  <JFXTextField layoutX="67.0" layoutY="467.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez votre adresse..." />
+                  <JFXDatePicker defaultColor="#002290" layoutX="67.0" layoutY="375.0" prefHeight="25.0" prefWidth="244.0" promptText="Entrez votre date de naissance..." />
+                  <JFXTextField layoutX="67.0" layoutY="422.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez votre lieu de naissance..." />
+                  <JFXTextField layoutX="66.0" layoutY="516.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez la ville..." />
+                  <JFXTextField layoutX="66.0" layoutY="561.0" prefHeight="25.0" prefWidth="238.0" promptText="Entrez le code postal..." />
+                  <JFXDatePicker defaultColor="#002290" layoutX="67.0" layoutY="614.0" prefHeight="25.0" prefWidth="244.0" promptText="Entrez la date de sortie..." />
+                  <JFXTimePicker defaultColor="#002290" layoutX="67.0" layoutY="661.0" prefHeight="25.0" prefWidth="244.0" promptText="Entrez l'heure de sortie.." />
+                  <JFXComboBox layoutX="67.0" layoutY="714.0" prefHeight="25.0" prefWidth="238.0" promptText="Choississez un motif de déplacement..." />
+                  <Button id="activateButton" layoutX="23.0" layoutY="776.0" mnemonicParsing="false" onAction="#boutonGeneration" text="Générer mon attestation">
+                    <cursor>
+                    	<Cursor fx:constant="HAND" />
+                  	</cursor>
+                  </Button>
+                  <Button id="activateButton" fx:id="annulation" layoutX="22.0" layoutY="850.0" mnemonicParsing="false" onAction="#changeScreenButton" prefHeight="52.0" prefWidth="326.0" text="Annuler">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <bottom>
+            <HBox id="footer" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="footerButton" fx:id="pageAccueil" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButton" prefWidth="74.0" text="Accueil">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="HOME" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageCarte" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButton" prefWidth="74.0" text="Carte">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="MAP_MARKER" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageLieux" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButton" prefWidth="74.0" text="Lieux">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="MAP_SIGNS" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButton" fx:id="pageMaSante" contentDisplay="TOP" mnemonicParsing="false" onAction="#changeScreenButton" prefWidth="74.0" text="Ma santé">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="HEARTBEAT" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="footerButtonSelected" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefWidth="79.5" text="Attestation">
+                     <graphic>
+                        <FontAwesomeIconView fill="#002290" glyphName="FILE_TEXT_ALT" size="20" />
+                     </graphic>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
